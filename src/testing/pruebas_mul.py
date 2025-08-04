@@ -6,6 +6,7 @@ from src.testing.data import (
     RED_10,
     RED_15,
     RED_20,
+    RED_22,
     RED_23,
     RED_25,
 )
@@ -20,7 +21,7 @@ from src.controllers.strategies.q_nodes_parallel import QNodesParallel
 # CONSTANTES #
 
 fila_inicial = 3
-cols_qnodes = ["L", "M", "N"]
+cols_qnodes = ["I", "J", "K"]
 
 
 def iniciar_pruebas_mul():

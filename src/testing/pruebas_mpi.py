@@ -6,6 +6,7 @@ from src.testing.data import (
     RED_10,
     RED_15,
     RED_20,
+    RED_22,
     RED_23,
     RED_25,
 )
