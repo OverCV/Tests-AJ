@@ -41,6 +41,9 @@ def preparar_pruebas(red_selecta, columnas):
     gestor_redes = Manager(estado_inicial)
     analizador = QNodesMPI(gestor_redes)
 
+    inicio: int = 16
+    iterador: int = 0
+
     for bloque in pruebas:
         print()
         for alcance, mecanismo in bloque:
@@ -51,6 +54,12 @@ def preparar_pruebas(red_selecta, columnas):
                 alcance,
                 mecanismo,
             )
+
+            if iterador < inicio:
+                continue
+
+            iterador += 1
+
             if not rank:
                 # Analizamos el proceso maestro
                 # print("nueva prueba")
