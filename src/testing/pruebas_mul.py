@@ -20,7 +20,7 @@ from src.controllers.strategies.q_nodes_parallel import QNodesParallel
 
 # CONSTANTES #
 
-fila_inicial = 3
+fila_inicial = 17
 cols_qnodes = ["I", "J", "K"]
 
 
