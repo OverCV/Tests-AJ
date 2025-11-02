@@ -42,10 +42,9 @@ def preparar_pruebas(red_selecta, columnas):
 
     global fila_inicial
 
-
     for bloque in pruebas:
         for alcance, mecanismo in bloque:
-            print()
+            print(f"fila_actual: {fila_inicial}")
             sia = analizador.aplicar_estrategia(
                 condiciones,
                 alcance,
@@ -65,7 +64,6 @@ def preparar_pruebas(red_selecta, columnas):
 
             # Limpiar memoria para que no afecte siguientes pruebas
             del sia
-            print(fila_inicial)
             # analizador.limpiar_memoria()
 
         #     break
