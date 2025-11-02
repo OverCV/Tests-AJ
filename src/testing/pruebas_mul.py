@@ -40,9 +40,12 @@ def preparar_pruebas(red_selecta, columnas):
     gestor_redes = Manager(estado_inicial)
     analizador = QNodesParallel(gestor_redes)
 
+    global fila_inicial
+
+
     for bloque in pruebas:
-        print()
         for alcance, mecanismo in bloque:
+            print()
             sia = analizador.aplicar_estrategia(
                 condiciones,
                 alcance,
@@ -62,6 +65,7 @@ def preparar_pruebas(red_selecta, columnas):
 
             # Limpiar memoria para que no afecte siguientes pruebas
             del sia
+            print(fila_inicial)
             # analizador.limpiar_memoria()
 
         #     break
