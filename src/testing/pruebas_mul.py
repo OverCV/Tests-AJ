@@ -25,7 +25,7 @@ cols_qnodes = ["I", "J", "K"]
 
 
 def iniciar_pruebas_mul():
-    red_selecta = RED_15
+    red_selecta = RED_22
     columnas = cols_qnodes
     preparar_pruebas(red_selecta, columnas)
 

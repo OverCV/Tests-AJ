@@ -1,18 +1,19 @@
 from src.controllers.manager import Manager
 
-from src.controllers.strategies.q_nodes_sec import QNodes
-from src.controllers.strategies.q_nodes import QNodes as QNodesMPI
-from src.controllers.strategies.q_nodes_parallel import QNodesParallel
+# from src.controllers.strategies.q_nodes_sec import QNodes
+# from src.controllers.strategies.q_nodes import QNodes as QNodesMPI
+# from src.controllers.strategies.q_nodes_parallel import QNodesParallel
 
 
 def iniciar():
-    # 15 nodos #111111111111111
-    # 20 nodos 11111111111111111111
-    estado_inicial = "1000000000"
-    condiciones = "1111111111"
-    alcance = "1111111111"
-    mecanismo = "1111111111"
+    # # 15 nodos #111111111111111
+    # # 20 nodos 11111111111111111111
+    estado_inicial = "1000000000000000000000"
+    # condiciones = "1111111111"
+    # alcance = "1111111111"
+    # mecanismo = "1111111111"
     gestor_sistema = Manager(estado_inicial)
+    gestor_sistema.generar_red(22)
 
     ### Ejemplo de solución mediante módulo de fuerza bruta ###
 
@@ -20,7 +21,7 @@ def iniciar():
 
     # analizador_qn = QNodes(gestor_sistema)
     # analizador_qn = QNodesMPI(gestor_sistema)
-    analizador_qn = QNodesParallel(gestor_sistema)
+    # analizador_qn = QNodesParallel(gestor_sistema)
 
     # ✅ Verifica que existe TPM de 20 nodos, o créala si no
     # if not gestor_sistema.tpm_filename.exists():
@@ -30,6 +31,6 @@ def iniciar():
     # 🧠 Ejecutar estrategia
     # analizador_qn = QNodes(gestor_sistema)
 
-    sia_uno = analizador_qn.aplicar_estrategia(condiciones, alcance, mecanismo)
+    # sia_uno = analizador_qn.aplicar_estrategia(condiciones, alcance, mecanismo)
 
-    print(sia_uno)
+    # print(sia_uno)
